@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000" >
+
+    <RelativeLayout
+        android:id="@+id/rel_lay_list_view_item"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/list_item_bg_white" >
+
+        <View
+            android:id="@+id/view_side_bar"
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#FF03BBEB"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/image_view_thumbnail"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/view_side_bar"
+            android:background="#00FF0000"
+            android:src="@drawable/no_image" />
+
+        <TextView
+            android:id="@+id/text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/text_view_ref_number"
+            android:layout_toRightOf="@id/image_view_thumbnail"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#FF000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@id/text_view_ref_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="#FF456"
+            android:textColor="#FF000000"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/image_view_star_severity"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/text_view_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/image_view_thumbnail"
+            android:background="#00000000"
+            android:src="@drawable/list_item_severity" />
+
+        <TextView
+            android:id="@+id/text_view_star_severity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/image_view_star_severity"
+            android:singleLine="true"
+            android:text="22 - High Severity"
+            android:textColor="#FF000000"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/image_view_incident_date"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/image_view_star_severity"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/image_view_thumbnail"
+            android:background="#00000000"
+            android:src="@drawable/list_item_date" />
+
+        <TextView
+            android:id="@+id/text_view_incident_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_star_severity"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/image_view_arrow"
+            android:layout_toRightOf="@id/image_view_incident_date"
+            android:singleLine="true"
+            android:text="22 - High Severity"
+            android:textColor="#FF000000"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/image_view_user"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/image_view_incident_date"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/image_view_thumbnail"
+            android:background="#00000000"
+            android:src="@drawable/list_item_user" />
+
+        <TextView
+            android:id="@+id/text_view_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_incident_date"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/image_view_arrow"
+            android:layout_toRightOf="@id/image_view_user"
+            android:singleLine="true"
+            android:text="22 - High Severity"
+            android:textColor="#FF000000"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@id/image_view_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:background="#00000000"
+            android:src="@drawable/right_arrow" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image_view_attachments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#00FF0000"
+        android:src="@drawable/attachments" />
+
+</RelativeLayout>

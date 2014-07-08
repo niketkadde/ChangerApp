@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IncidentLogs</string>
+
+    <!-- App Font Typeface Names -->
+    <string name="type_face_regular">Helvetica.ttf</string>
+    <string name="type_face_bold">HelveticaBold.ttf</string>
+
+    <!-- App messages -->
+    <string name="no_record_found">Incidents log is empty.</string>
+
+</resources>

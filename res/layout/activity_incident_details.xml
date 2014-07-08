@@ -1,0 +1,232 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/rel_lay_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/action_bar_bg" >
+
+        <ImageView
+            android:id="@+id/image_view_app_icon"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:src="@drawable/app_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/image_view_app_icon"
+            android:singleLine="true"
+            android:text="Incident Log"
+            android:textColor="#FF03BBEB"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_lay_user_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel_lay_action_bar"
+        android:background="#FF03BBEB"
+        android:paddingBottom="5dp" >
+
+        <ImageView
+            android:id="@+id/image_view_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#00000000"
+            android:src="@drawable/active_user" />
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/image_view_user"
+            android:singleLine="true"
+            android:text="Name"
+            android:textColor="#FF000000"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_view_dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/text_view_name"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/image_view_user"
+            android:singleLine="true"
+            android:text="DOB"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_view_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/text_view_dob"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/image_view_user"
+            android:singleLine="true"
+            android:text="Email"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_view_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/text_view_email"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/image_view_user"
+            android:singleLine="true"
+            android:text="Mobile"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lin_lay_attachments_block"
+        android:layout_below="@id/rel_lay_user_details"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp" >
+
+            <TextView
+                android:id="@+id/text_view_incident_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"
+                android:text="Incident Details"
+                android:textColor="#FF000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/text_view_incident_date_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/text_view_incident_details"
+                android:layout_marginTop="15dp"
+                android:text="Incident Date"
+                android:textColor="#FF000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_view_created_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/text_view_incident_date_"
+                android:layout_marginTop="15dp"
+                android:text="Created Date"
+                android:textColor="#FF000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_view_processed_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/text_view_created_date"
+                android:layout_marginTop="15dp"
+                android:text="Processed Date"
+                android:textColor="#FF000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_view_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/text_view_processed_date"
+                android:layout_marginTop="15dp"
+                android:text="Location"
+                android:textColor="#FF000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_view_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/text_view_location"
+                android:layout_marginTop="15dp"
+                android:text="Note"
+                android:textColor="#FF000000"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_below="@id/rel_lay_user_details"
+        android:background="@drawable/shadow_bottom" />
+
+    <LinearLayout
+        android:id="@id/lin_lay_attachments_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="@drawable/shadow_top" />
+
+        <TextView
+            android:id="@+id/text_view_incident_attachments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:singleLine="true"
+            android:text="ATTACHMENTS"
+            android:textColor="#FFAAAAAA"
+            android:textSize="20sp" />
+
+        <HorizontalScrollView
+            android:id="@+id/hori_scroll_view_attachments"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFFFF"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/lin_lay_attachments"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
